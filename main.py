@@ -1,16 +1,32 @@
-# This is a sample Python script.
+import os
+from PyPDF2 import PdfMerger
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def merge_pdfs(folder_path, output_file):
+    # create a PdfMerger object
+    merger = PdfMerger()
+
+    # get all files in the folder
+    for file_name in os.listdir(folder_path):
+        if file_name.endswith(".pdf"):
+            file_path = os.path.join(folder_path, file_name)
+            print(f"Adding {file_name} to the merger...")
+            merger.append(file_path)
+
+    # write out the merged PDF
+    with open(output_file, "wb") as output_pdf:
+        merger.write(output_pdf)
+    print(f"All PDFs merged into {output_file}")
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    folder_path = input("Provide folder path: ")
+    # example: C:/Users/user/Documents/pdf
+
+    output_file = input("Provide output path: ")
+    # example: C:/Users/user/Desktop/output/merged_output.pdf
+
+    merge_pdfs(folder_path, output_file)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
