@@ -22,6 +22,7 @@ A simple Python script to merge all PDF files in a given folder into a single ou
    ```bash
    pip install PyPDF2
    ```
+   
 ## Usage
 
 1. Run the program
