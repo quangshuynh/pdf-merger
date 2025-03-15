@@ -15,7 +15,7 @@ A simple Python script to merge all PDF files in a given folder into a single ou
 
 1. **Clone this repository or download the script directly**:
    ```bash
-   git clone https://github.com/yourusername/pdf-merger.git
+   git clone https://github.com/quangshuynh/pdf-merger.git
    cd pdf-merger
    ```
 2. **Install the required libraries: ** Install `PyPDF2` if you haven't already:
@@ -31,7 +31,7 @@ A simple Python script to merge all PDF files in a given folder into a single ou
    ```
 2. When prompted, enter:
   - The path to the folder containing the PDF files you want to merge.
-     - Example: `C:/Users/yourusername/Documents/pdf`
+     - Example: `C:/Users/#YOUR USER#/Documents/pdf`
   - The output path and file name for the merged PDF.
-    - Example: `C:/Users/yourusername/Desktop/output/merged_output.pdf`
+    - Example: `C:/Users/#YOUR USER#/Desktop/output/merged_output.pdf`
 
