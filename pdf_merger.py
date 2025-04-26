@@ -22,7 +22,7 @@ def main():
     folder_path = input("Provide folder path: ")
     # example: C:/Users/user/Documents/pdf
 
-    output_file = input("Provide output path: ")
+    output_file = input("Provide output file: ")
     # example: C:/Users/user/Desktop/output/merged_output.pdf
 
     merge_pdfs(folder_path, output_file)
